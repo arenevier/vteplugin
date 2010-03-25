@@ -1,0 +1,6 @@
+- vteplugin.c is available under the WTFPL license.
+
+- npapi.h npfunctions.h nptypes.h npunix.c npupp.h are available under either
+  MPL 1.1, GPL 2.0 or LGPL 2.1
+
+- license of npruntime.h is explicited at the beginning of the file.
