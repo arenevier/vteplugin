@@ -35,12 +35,12 @@
 FILE* debug_file;
 void debug_start() {
     char* filename;
-    if (!(filename = strdup(getenv("VTEPLUGIN_DEBUG_FNAME")))) {
+    if (!(filename = g_strdup(getenv("VTEPLUGIN_DEBUG_FNAME")))) {
         const char* tmpdir = g_get_tmp_dir();
         filename = g_strdup_printf("%s/%s", tmpdir, DEBUG_DEFAULT_FNAME);
     }
     debug_file = fopen(filename, "w");
-    free (filename);
+    g_free (filename);
 }
 void debug_stop() {
     fclose (debug_file);
